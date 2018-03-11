@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'pfdintext-regular';
+  src: url('../fonts/pfdintext-regular/pfdintextpro-regular.eot');
+  src: url('../fonts/pfdintext-regular/pfdintextpro-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pfdintext-regular/PFDinTextPro-Regular.svg') format('svg'),
+  url('../fonts/pfdintext-regular/PFDinTextPro-Regular.woff') format('woff'),
+  url('../fonts/pfdintext-regular/PFDinTextPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pfdintext-bold';
+  src: url('../fonts/pfdintext-bold/pfdintextpro-bold.eot');
+  src: url('../fonts/pfdintext-bold/pfdintextpro-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pfdintext-bold/PFDinTextPro-Bold.svg') format('svg'),
+  url('../fonts/pfdintext-bold/PFDinTextPro-Bold.woff') format('woff'),
+  url('../fonts/pfdintext-bold/PFDinTextPro-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pfdintext-light';
+  src: url('../fonts/pfdintext-ligth/pfdintextpro-light.eot');
+  src: url('../fonts/pfdintext-ligth/pfdintextpro-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pfdintext-ligth/PFDinTextPro-Light.svg') format('svg'),
+  url('../fonts/pfdintext-ligth/PFDinTextPro-Light.woff') format('woff'),
+  url('../fonts/pfdintext-ligth/PFDinTextPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pfdintextpro-medium';
+  src: url('../fonts/pfdintextpro-medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6, ol, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, img {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+input,
+button,
+textarea {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+}
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+//sass --watch css/style.scss:css/style.css
