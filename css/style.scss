@@ -228,7 +228,30 @@ header {
     color: #fff;
     font-size: 16px;
     width: 100%;
+    margin: 40px 0 25px 0;
+    box-shadow: 0 0 6px #efefef;
   }
+  .checkbox-container {
+    @include flex(flex,wrap,center);
+  }
+  #rememberMe{
+    vertical-align: middle;
+  }
+  .border{
+    border-bottom: 1px solid #000;
+  }
+  .check{
+    display: inline-flex;
+  }
+}
+.reg-form{
+  margin-bottom: 65px;
+}
+.autho-form{
+  margin-bottom: 125px;
+}
+.background-pic{
+  background: url("../img/seastar.png") no-repeat left;
 }
 .basket {
   @include width-container;

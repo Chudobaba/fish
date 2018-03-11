@@ -4,7 +4,7 @@
 <body>
 <?php include "../template/header.php"?>
 
-<form class="form-aut">
+<form class="form-aut reg-form">
     <h2>реєстрація</h2>
     <label for="username">Ім’я</label>
     <div class="input-container">
@@ -28,8 +28,9 @@
     </div>
 <!--    <input class="button" value="ЗАреєструватися" type="submit">-->
     <button type="submit">ЗАреєструватися</button>
-    <p>Вже маєте обліковий запис?<a href="#">Увійти</a></p>
+    <p class="align-center">Вже маєте обліковий запис?<a class="border" href="#">Увійти</a></p>
 </form>
+<div class="background-pic"></div>
 
 
 <script src="../js/custom.js"></script>

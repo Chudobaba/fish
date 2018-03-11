@@ -264,7 +264,30 @@ header {
     padding: 22px 0;
     color: #fff;
     font-size: 16px;
-    width: 100%; }
+    width: 100%;
+    margin: 40px 0 25px 0;
+    box-shadow: 0 0 6px #efefef; }
+  .form-aut .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; }
+  .form-aut #rememberMe {
+    vertical-align: middle; }
+  .form-aut .border {
+    border-bottom: 1px solid #000; }
+  .form-aut .check {
+    display: inline-flex; }
+
+.reg-form {
+  margin-bottom: 65px; }
+
+.autho-form {
+  margin-bottom: 125px; }
+
+.background-pic {
+  background: url("../img/seastar.png") no-repeat left; }
 
 .basket {
   max-width: 1230px;
