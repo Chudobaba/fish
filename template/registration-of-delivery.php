@@ -38,12 +38,16 @@
 
             <div class="radio-container">
                 <div class="radio">
-                    <label for="delivery">Адресна доставка по всій території України</label>
-                    <input name="delivery" type="radio">
+                    <input name="delivery" checked class="radio-input" id="delivery" type="radio">
+                    <label for="delivery" class="custom-style-radio">
+                        <span class="label-text">Адресна доставка по всій території України</span>
+                    </label>
                 </div>
-                <div class="check">
-                    <label for="delivery">Самовивіз</label>
-                    <input name="delivery" type="radio">
+                <div class="radio">
+                    <input name="delivery" class="radio-input" id="driveway" type="radio">
+                    <label for="driveway" class="custom-style-radio">
+                        <span class="label-text">Самовивіз</span>
+                    </label>
                 </div>
             </div>
         </section>
