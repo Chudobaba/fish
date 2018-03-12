@@ -326,4 +326,54 @@ header {
   }
 }
 
+.step-form {
+  @include width-container(840px);
+  padding: 0;
+  margin-top: 80px;
+  box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+
+  .content {
+    padding: 50px;
+  }
+
+  .title-form {
+    padding: 50px 50px 30px;
+  }
+
+  .title {
+  display: none;
+  }
+  .one-step {
+    @include flex;
+  }
+  .item {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .title-step {
+    font-size: 24px;
+    color: #333333;
+    font-family: 'pfdintext-bold' ,sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .radio-container {
+    @include flex;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.steps {
+  padding: 0 50px;
+  ul {
+    @include flex;
+  }
+}
+.actions {
+  background-color: #efefef;
+}
+
 @import "./media";

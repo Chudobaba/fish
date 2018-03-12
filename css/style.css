@@ -21,6 +21,9 @@
   src: url("../fonts/pfdintextpro-medium.ttf");
   font-weight: 500;
   font-style: normal; }
+* {
+  box-sizing: border-box; }
+
 html, body, ul, li, h1, h2, h3, h4, h5, h6, ol, ul, li, p {
   margin: 0;
   padding: 0; }
@@ -47,7 +50,8 @@ textarea {
   border: none;
   display: inline-block;
   background-color: transparent;
-  outline: none; }
+  outline: none;
+  box-sizing: border-box; }
 
 .align-right {
   text-align: right; }
@@ -350,6 +354,56 @@ header {
     .basket .price-and-order .price {
       font-family: 'pfdintext-bold',sans-serif;
       color: #4d7fef; }
+
+.step-form {
+  max-width: 840px;
+  margin: auto;
+  padding: 0 10px;
+  padding: 0;
+  margin-top: 80px;
+  box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; }
+  .step-form .content {
+    padding: 50px; }
+  .step-form .title-form {
+    padding: 50px 50px 30px; }
+  .step-form .title {
+    display: none; }
+  .step-form .one-step {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row; }
+  .step-form .item {
+    max-width: 300px;
+    width: 100%; }
+  .step-form .title-step {
+    font-size: 24px;
+    color: #333333;
+    font-family: 'pfdintext-bold' ,sans-serif;
+    width: 100%;
+    text-transform: uppercase; }
+  .step-form .radio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 60px; }
+
+.steps {
+  padding: 0 50px; }
+  .steps ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row; }
+
+.actions {
+  background-color: #efefef; }
 
 @media (max-width: 992px) {
   .menu-container .nav {
