@@ -277,12 +277,29 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-direction: row; }
-  .form-aut #rememberMe {
-    vertical-align: middle; }
+  .form-aut #rememberMe + .style-checked:after {
+    content: "";
+    background-color: #333333;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .form-aut #rememberMe:checked + .style-checked:after {
+    background: #fff url("../img/tick.png") no-repeat center; }
   .form-aut .border {
     border-bottom: 1px solid #000; }
   .form-aut .check {
-    display: inline-flex; }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 28px;
+    position: relative; }
+  .form-aut .check-label {
+    margin-left: 20px; }
 
 .reg-form {
   margin-bottom: 65px; }
@@ -372,7 +389,7 @@ header {
   .step-form .one-step {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     flex-direction: row; }
   .step-form .item {
@@ -404,6 +421,16 @@ header {
 
 .actions {
   background-color: #efefef; }
+  .actions ul {
+    height: 80px;
+    max-width: 720px;
+    margin: auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; }
 
 @media (max-width: 992px) {
   .menu-container .nav {

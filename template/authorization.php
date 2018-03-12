@@ -15,14 +15,16 @@
         <input class="pass" placeholder="Пароль" required="" id="password" type="password">
     </div>
     <div class="checkbox-container">
-        <div class="check">
-            <input id='rememberMe' name='rememberMe' type='checkbox'>
-<!--            <label>Запам’ятати мене</label>-->
-            <p>Запам’ятати мене</p>
+        <div class="check-container">
+            <div class="check">
+                <input id='rememberMe' name='rememberMe' type='checkbox'>
+                <label class="style-checked" for="rememberMe">
+                    <span class="check-label">Запам’ятати мене</span>
+                </label>
+            </div>
         </div>
         <a class="border" href="#">Забули пароль?</a>
     </div>
-<!--    <input class="button" value="Увійти" type="submit">-->
     <button type="submit">Увійти</button>
     <p class="align-center">Не зареєстровані?<a class="border" href="#"> Зареєструватися</a></p>
 </form>

@@ -39,11 +39,11 @@
             <div class="radio-container">
                 <div class="radio">
                     <label for="delivery">Адресна доставка по всій території України</label>
-                    <input name="delivery" type="checkbox">
+                    <input name="delivery" type="radio">
                 </div>
                 <div class="check">
                     <label for="delivery">Самовивіз</label>
-                    <input name="delivery" type="checkbox">
+                    <input name="delivery" type="radio">
                 </div>
             </div>
         </section>

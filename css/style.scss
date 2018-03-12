@@ -234,14 +234,32 @@ header {
   .checkbox-container {
     @include flex(flex,wrap,center);
   }
-  #rememberMe{
-    vertical-align: middle;
+  #rememberMe + .style-checked:after{
+    content: "";
+    background-color: #333333;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #rememberMe:checked + .style-checked:after{
+    background: #fff url("../img/tick.png") no-repeat center;
+  }
+  .check-container {
+
   }
   .border{
     border-bottom: 1px solid #000;
   }
   .check{
-    display: inline-flex;
+    @include flex(flex,wrap,center);
+    height: 28px;
+    position: relative;
+  }
+  .check-label {
+    margin-left: 20px;
   }
 }
 .reg-form{
@@ -345,7 +363,7 @@ header {
   display: none;
   }
   .one-step {
-    @include flex;
+    @include flex(flex,wrap,center);
   }
   .item {
     max-width: 300px;
@@ -374,6 +392,11 @@ header {
 }
 .actions {
   background-color: #efefef;
+  ul {
+    height: 80px;
+    @include width-container(720px);
+    @include flex(flex,wrap,center);
+  }
 }
 
 @import "./media";
