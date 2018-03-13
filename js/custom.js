@@ -47,6 +47,14 @@ if(form){
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
+        labels: {
+            cancel: "Cancel",
+            current: "вибраний:",
+            finish: "кінець",
+            next: "Далі",
+            previous: "Повернутися назад",
+            loading: "Loading ..."
+        },
         onStepChanging: function (event, currentIndex, newIndex)
         {
             form.validate().settings.ignore = ":disabled,:hidden";

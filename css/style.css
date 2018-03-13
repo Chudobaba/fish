@@ -150,7 +150,8 @@ header {
     position: relative;
     height: 20px;
     width: 30px;
-    z-index: 22; }
+    z-index: 22;
+    cursor: pointer; }
     .menu-container .toggle-menu .close {
       height: 2px;
       background-color: #4d7fee;
@@ -465,6 +466,41 @@ header {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row; }
+  .steps li {
+    outline: none;
+    position: relative;
+    width: 25%; }
+    .steps li:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background: #efefef;
+      width: 90%;
+      left: 14px;
+      top: 4px;
+      z-index: 1; }
+  .steps .current-info {
+    display: none; }
+  .steps .current .number,
+  .steps .done .number {
+    background-color: #4d7fee; }
+  .steps .current a,
+  .steps .done a {
+    color: #4d7fee; }
+  .steps .done:after {
+    background-color: #4d7fee; }
+  .steps a {
+    font-family: 'pfdintext-bold', sans-serif;
+    font-size: 14px;
+    outline: none; }
+  .steps .number {
+    height: 9px;
+    width: 9px;
+    display: block;
+    background-color: #efefef;
+    border-radius: 100%;
+    font-size: 0;
+    margin-bottom: 15px; }
 
 .actions {
   background-color: #efefef; }
@@ -481,7 +517,6 @@ header {
   .actions li {
     flex-grow: 1; }
     .actions li:nth-child(2) a {
-      margin-left: auto;
       margin-left: auto; }
   .actions a {
     display: flex;
@@ -501,6 +536,17 @@ header {
     .actions a:hover {
       background-color: #4d7fee;
       color: #fff; }
+
+.delivery-and-total-order {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row; }
+  .delivery-and-total-order .total-order {
+    max-width: 410px; }
+  .delivery-and-total-order .delivery {
+    max-width: 160px; }
 
 @media (max-width: 992px) {
   .menu-container .nav {
