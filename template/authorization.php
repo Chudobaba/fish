@@ -5,7 +5,7 @@
 <?php include "../template/header.php"?>
 
 <form class="form-aut autho-form">
-    <h2>Авторизація</h2>
+    <h2 class="heading">Авторизація</h2>
     <label for="username">Ім’я або e-mail</label>
     <div class="input-container">
         <input class="user-name" placeholder="Ім’я або e-mail" required="" id="username" type="text" >

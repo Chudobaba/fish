@@ -252,7 +252,7 @@ header {
     border-bottom: 1px solid #cfcfcf;
     width: 100%;
     font-size: 18px; }
-  .form-aut h2 {
+  .form-aut .heading, .form-aut .title-form {
     font-size: 24px;
     text-transform: uppercase;
     padding: 55px 0;
@@ -546,7 +546,49 @@ header {
   .delivery-and-total-order .total-order {
     max-width: 410px; }
   .delivery-and-total-order .delivery {
-    max-width: 160px; }
+    max-width: 230px; }
+  .delivery-and-total-order .title-section {
+    font-family: 'pfdindisplayPRO Medium', sans-serif;
+    font-size: 16px; }
+  .delivery-and-total-order .tablet th {
+    font-family: 'pfdindisplayPRO Bold', sans-serif;
+    font-size: 12px;
+    color: #c7c7c7;
+    text-align: left;
+    padding-top: 20px; }
+  .delivery-and-total-order .price {
+    font-size: 12px;
+    color: #4d7fee;
+    font-family: 'pfdindisplayPRO Bold', sans-serif; }
+  .delivery-and-total-order .amount {
+    text-align: center; }
+  .delivery-and-total-order .title-product {
+    font-size: 12px;
+    font-family: 'pfdindisplayPRO Medium', sans-serif; }
+  .delivery-and-total-order .grey-line {
+    height: 1px;
+    background-color: #dedede;
+    margin: 30px 0 20px; }
+
+.payment-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row; }
+  .payment-container .pay-item {
+    border: 4px solid #dedede;
+    width: 350px;
+    min-height: 118px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #f8f8f8; }
+
+.confirm-item {
+  MARGIN: AUTO;
+  MAX-WIDTH: 377PX; }
+  .confirm-item .confirm-description {
+    text-align: center; }
 
 @media (max-width: 992px) {
   .menu-container .nav {

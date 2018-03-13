@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "../template/head.php"?>
+<?php include "../template/head.php" ?>
 <body>
 <div class="wrapper">
-    <?php include "../template/header.php"?>
+    <?php include "../template/header.php" ?>
 
     <form id="registrationFoDelivery" class="step-form form-aut" action="#">
         <h2 class="title-form">Оформлення замовлення</h2>
@@ -13,7 +13,8 @@
                 <div class="item">
                     <label for="username">Ім’я</label>
                     <div class="input-container">
-                        <input class="user-name" autocomplete="off" placeholder="Ім’я або e-mail" required="" id="username" type="text" >
+                        <input class="user-name" autocomplete="off" placeholder="Ім’я або e-mail" required=""
+                               id="username" type="text">
                     </div>
                 </div>
                 <div class="item">
@@ -25,7 +26,8 @@
                 <div class="item">
                     <label for="number">Номер телефону</label>
                     <div class="input-container">
-                        <input class="tel" autocomplete="off" placeholder="+380509494497" required="" id="number" type="tel">
+                        <input class="tel" autocomplete="off" placeholder="+380509494497" required="" id="number"
+                               type="tel">
                     </div>
                 </div>
                 <div class="item">
@@ -64,13 +66,13 @@
                         </thead>
                         <tr>
                             <td>
-                                <h4 class="title-product">Скумбрія середньосолена без голови патрана кг</h4>
+                                <h4 class="title-product">Скумбрія середньосолена без голови патрана</h4>
                             </td>
                             <td>
                                 <p class="amount">2</p>
                             </td>
                             <td>
-                                <p class="price">300 грн</p>
+                                <p class="price">600</p>
                             </td>
                         </tr>
                         <tr>
@@ -78,41 +80,111 @@
                                 <h4 class="title-product">Кілька в гострій заливці з часником та зеленню</h4>
                             </td>
                             <td>
-                                <p class="amount">2</p>
+                                <p class="amount">1</p>
                             </td>
                             <td>
-                                <p class="price">300 грн</p>
+                                <p class="price">170</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4 class="title-product">Скумбрія середньосолена без голови патрана кг</h4>
+                                <h4 class="title-product">Сьомга холодного копчення, філе</h4>
                             </td>
                             <td>
-                                <p class="amount">2</p>
+                                <p class="amount">1</p>
                             </td>
                             <td>
-                                <p class="price">300 грн</p>
+                                <p class="price">200</p>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="delivery">
                     <h2 class="title-section">Доставка</h2>
+                    <table class="tablet-delivery tablet">
+                        <!--                        <thead>-->
+                        <tr>
+                            <th>Адреса</th>
+                        </tr>
+                        <!--                        </thead>-->
+                        <tr>
+                            <td>
+                                <h4 class="title-product">м. Чернівці, вул. Руська 205В, 2 пов.</h4>
+                            </td>
+                        </tr>
+                        <!--                        <thead>-->
+                        <tr>
+                            <th>Спосіб доставки</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 class="title-product">Доставка за адресою по всій
+                                    території України</h4>
+                            </td>
+                        </tr>
+                        <!--                        </thead>-->
+                    </table>
+                </div>
+                <div class="sum">
+                    <table class="tablet-sum tablet">
+                    <div class="grey-line"></div>
+                    <tr>
+                        <th>СУМА:</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-product">900 грн</h4>
+                        </td>
+                    </tr>
+                    </table>
                 </div>
             </section>
+
+
             <h3>Оплата</h3>
-            <section>
-                <ul>
-                    <li>Foo</li>
-                    <li>Bar</li>
-                    <li>Foobar</li>
-                </ul>
+            <section class="payment">
+<!--                <ul>-->
+<!--                    <li>Foo</li>-->
+<!--                    <li>Bar</li>-->
+<!--                    <li>Foobar</li>-->
+<!--                </ul>-->
+                <div class="payment-container">
+                    <div class="pay-item">
+                        <div class="img-container">
+                            <img src="../img/liqpay-log.png" alt="liqpay">
+                        </div>
+                        <div class="radio">
+                            <input name="delivery" class="radio-input required" id="driveway" required type="radio">
+                            <label for="driveway" class="custom-style-radio">
+                                <span class="label-text">Оплата через Приват 24 - Liqpay</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pay-item">
+                        <div class="radio">
+                            <input name="delivery" class="radio-input required" id="driveway" required type="radio">
+                            <label for="driveway" class="custom-style-radio">
+                                <span class="label-text">Оплата наложенным платежом</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </section>
             <h3>Завершення</h3>
-            <section>
-                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
-                <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+            <section class="confirm">
+<!--                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">-->
+<!--                <label for="acceptTerms">I agree with the Terms and Conditions.</label>-->
+                <div class="confirm-item">
+                    <div class="img-container">
+                        <img src="../img/fish.png" alt="fish">
+                    </div>
+                    <div class="confirm-description">
+                        <h2>Дякуємо за замовлення!</h2>
+                        <p>Незабаром наш менеджер зв’яжеться з Вами.
+                            Також ми вислали лист з деталями на Вашу електронну пошту.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </form>
@@ -120,6 +192,6 @@
     <img src="../img/star-img.png" alt="star" class="star-img">
 </div>
 
-<?php include "../template/scripts.php"?>
+<?php include "../template/scripts.php" ?>
 </body>
 </html>

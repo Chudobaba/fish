@@ -5,7 +5,7 @@
 <?php include "../template/header.php"?>
 
 <form class="form-aut reg-form">
-    <h2>реєстрація</h2>
+    <h2 class="heading">реєстрація</h2>
     <label for="username">Ім’я</label>
     <div class="input-container">
         <input class="user-name" placeholder="Ім’я або e-mail" required="" id="username" type="text" >
