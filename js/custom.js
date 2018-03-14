@@ -78,3 +78,11 @@ $(".pay-item").click(function () {
     $(this).addClass("active");
     $(this).find(".radio-input").attr("checked","checked");
 });
+
+//personal-cabinet
+$("#example-vertical").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    stepsOrientation: "vertical"
+});
