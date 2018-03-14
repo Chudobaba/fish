@@ -424,7 +424,8 @@ header {
       display: none;
     }
   }
-  .radio-input:checked + .custom-style-radio {
+  .radio-input:checked + .custom-style-radio,
+  .pay-item.active .custom-style-radio{
     &:before {
       background-color: #4D7FEE;
     }
@@ -437,79 +438,97 @@ header {
     font-size: 14px;
     color: #000;
   }
-}
 
-.steps {
-  padding: 0 50px;
-  ul {
-    @include flex;
-  }
-  li {
-    outline: none;
-    position: relative;
-    width: 25%;
-    &:after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background: #efefef;
-      width: 90%;
-      left: 14px;
-      top: 4px;
-      z-index: 1;
+  .steps {
+    padding: 0 50px;
+    ul {
+      @include flex;
     }
-  }
-  .current-info {
-    display: none;
-  }
-  .current,
-  .done {
-    .number {
-      background-color: #4d7fee;
+    li {
+      outline: none;
+      position: relative;
+      width: 25%;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: #efefef;
+        width: 90%;
+        left: 14px;
+        top: 4px;
+        z-index: 1;
+      }
+    }
+    .current-info {
+      display: none;
+    }
+    .current,
+    .done {
+      .number {
+        background-color: #4d7fee;
+      }
+      a {
+        color: #4d7fee;
+      }
+    }
+    .done,
+    .last.current {
+      &:after {
+        background-color: #4d7fee;
+      }
     }
     a {
-      color: #4d7fee;
+      font-family: 'pfdintext-bold', sans-serif;
+      font-size: 14px;
+      outline: none;
+    }
+    .number {
+      height: 9px;
+      width: 9px;
+      display: block;
+      background-color: #efefef;
+      border-radius: 100%;
+      font-size: 0;
+      margin-bottom: 15px;
     }
   }
-  .done {
-    &:after {
-      background-color: #4d7fee;
-    }
-  }
-  a {
-    font-family: 'pfdintext-bold', sans-serif;
-    font-size: 14px;
-    outline: none;
-  }
-  .number {
-    height: 9px;
-    width: 9px;
-    display: block;
+
+  .actions {
     background-color: #efefef;
-    border-radius: 100%;
-    font-size: 0;
-    margin-bottom: 15px;
-  }
-}
-.actions {
-  background-color: #efefef;
-  ul {
-    height: 80px;
-    @include width-container(720px);
-    @include flex(flex,wrap,center);
-  }
-  li {
-    flex-grow: 1;
-    &:nth-child(2) {
-      a {
-        margin-left: auto;
+    ul {
+      height: 80px;
+      @include width-container(720px);
+      @include flex(flex,wrap,center);
+    }
+    li {
+      flex-grow: 1;
+      &:nth-child(2) {
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    a {
+      @include flex(flex,nowrap,center,center);
+      @include transition(background-color);
+      width: 100%;
+      max-width: 180px;
+      height: 40px;
+      border: 1px solid #4d7fee;
+      color: #4d7fee;
+      font-size: 16px;
+      font-family: 'pfdintext-light', sans-serif;
+      text-align: center;
+      &:hover {
+        background-color: #4d7fee;
+        color: #fff;
       }
     }
   }
-  a {
+
+  .link-to-home {
     @include flex(flex,nowrap,center,center);
     @include transition(background-color);
-    width: 100%;
     max-width: 180px;
     height: 40px;
     border: 1px solid #4d7fee;
@@ -517,9 +536,30 @@ header {
     font-size: 16px;
     font-family: 'pfdintext-light', sans-serif;
     text-align: center;
+    margin: 20px auto 0;
     &:hover {
       background-color: #4d7fee;
       color: #fff;
+    }
+  }
+
+  .confirm-item {
+    margin: auto;
+    max-width: 377px;
+    .confirm-description{
+      text-align: center;
+      padding-bottom: 25px;
+    }
+    .confirm-description h2{
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: 'pfdindisplayPRO Medium', sans-serif;
+    }
+    .confirm-description p{
+      font-size: 14px;
+      color: #bebebe;
+      font-family: 'pfdintext-regular', sans-serif;
+
     }
   }
 }
@@ -572,6 +612,7 @@ header {
     }
   }
 }
+
 .payment-container{
   @include flex;
   .pay-item{
@@ -596,22 +637,5 @@ header {
     }
   }
 }
-.confirm-item {
-  margin: auto;
-  max-width: 377px;
- .confirm-description{
-   text-align: center;
- }
-  .confirm-description h2{
-    font-size: 24px;
-    text-transform: uppercase;
-    font-family: 'pfdindisplayPRO Medium', sans-serif;
-  }
-  .confirm-description p{
-    font-size: 14px;
-    color: #bebebe;
-    font-family: 'pfdintext-regular', sans-serif;
 
-  }
-}
 @import "./media";

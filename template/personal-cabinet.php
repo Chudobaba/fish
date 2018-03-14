@@ -11,6 +11,7 @@
             <div class="item">
                 <label for="username">Ім’я</label>
                 <div class="input-container">
+                    <span class="value-input value-user-name"></span>
                     <input class="user-name" autocomplete="off" placeholder="Ім’я або e-mail" required=""
                            id="username" type="text">
                 </div>

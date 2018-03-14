@@ -60,6 +60,11 @@ if(form){
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
+        onStepChanged : function () {
+            if( $( ".last" ).hasClass( "current" )){
+                $(".actions").remove();
+            }
+        },
         onFinishing: function (event, currentIndex)
         {
             form.validate().settings.ignore = ":disabled";
@@ -84,5 +89,8 @@ $("#example-vertical").steps({
     headerTag: "h3",
     bodyTag: "section",
     transitionEffect: "slideLeft",
-    stepsOrientation: "vertical"
+    stepsOrientation: "vertical",
+    enablePagination : false,
+    enableAllSteps : true,
+    saveState : true
 });

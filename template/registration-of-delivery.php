@@ -61,7 +61,7 @@
                         <tr>
                             <th class="title-table">Продукт</th>
                             <th class="title-table">Кількість</th>
-                            <th  class="title-table">Ціна</th>
+                            <th class="title-table">Ціна</th>
                         </tr>
                         </thead>
                         <tr>
@@ -137,7 +137,7 @@
                             <img src="../img/liqpay-log.png" alt="liqpay">
                         </div>
                         <div class="radio">
-                            <input name="delivery" class="radio-input required" id="driveway" required type="radio">
+                            <input name="delivery" class="radio-input required" id="driveway" type="radio">
                             <label for="driveway" class="custom-style-radio">
                                 <span class="label-text">Оплата через Приват 24 - Liqpay</span>
                             </label>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="pay-item">
                         <div class="radio">
-                            <input name="delivery" class="radio-input required" checked="checked" id="driveway2" required type="radio">
+                            <input name="delivery" class="radio-input required" id="driveway2" type="radio">
                             <label for="driveway2" class="custom-style-radio">
                                 <span class="label-text">Оплата наложенным платежом</span>
                             </label>
@@ -155,8 +155,6 @@
             </section>
             <h3>Завершення</h3>
             <section class="confirm">
-<!--                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">-->
-<!--                <label for="acceptTerms">I agree with the Terms and Conditions.</label>-->
                 <div class="confirm-item">
                     <div class="img-container">
                         <img src="../img/fish.png" alt="fish">
@@ -164,7 +162,8 @@
                     <div class="confirm-description">
                         <h2>Дякуємо за замовлення!</h2>
                         <p>Незабаром наш менеджер зв’яжеться з Вами.</p>
-                           <p>Також ми вислали лист з деталями на Вашу електронну пошту.</p>
+                        <p>Також ми вислали лист з деталями на Вашу електронну пошту.</p>
+                        <a href="/" class="link-to-home">на головну</a>
                     </div>
                 </div>
             </section>
