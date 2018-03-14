@@ -59,9 +59,9 @@
                     <table class="tablet">
                         <thead>
                         <tr>
-                            <th>Продукт</th>
-                            <th>Кількість</th>
-                            <th class="align-center">Ціна</th>
+                            <th class="title-table">Продукт</th>
+                            <th class="title-table">Кількість</th>
+                            <th  class="title-table">Ціна</th>
                         </tr>
                         </thead>
                         <tr>
@@ -102,19 +102,16 @@
                 <div class="delivery">
                     <h2 class="title-section">Доставка</h2>
                     <table class="tablet-delivery tablet">
-                        <!--                        <thead>-->
                         <tr>
-                            <th>Адреса</th>
+                            <th class="title-table">Адреса</th>
                         </tr>
-                        <!--                        </thead>-->
                         <tr>
                             <td>
                                 <h4 class="title-product">м. Чернівці, вул. Руська 205В, 2 пов.</h4>
                             </td>
                         </tr>
-                        <!--                        <thead>-->
                         <tr>
-                            <th>Спосіб доставки</th>
+                            <th class="title-table">Спосіб доставки</th>
                         </tr>
                         <tr>
                             <td>
@@ -122,33 +119,18 @@
                                     території України</h4>
                             </td>
                         </tr>
-                        <!--                        </thead>-->
                     </table>
                 </div>
                 <div class="sum">
-                    <table class="tablet-sum tablet">
-                    <div class="grey-line"></div>
-                    <tr>
-                        <th>СУМА:</th>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4 class="title-product">900 грн</h4>
-                        </td>
-                    </tr>
-                    </table>
+                    <div class="max-width">
+                        <h4 class="title-table">СУМА:</h4>
+                        <h4 class="title-product">900 грн</h4>
+                    </div>
                 </div>
             </section>
 
-
             <h3>Оплата</h3>
             <section class="payment">
-<!--                <ul>-->
-<!--                    <li>Foo</li>-->
-<!--                    <li>Bar</li>-->
-<!--                    <li>Foobar</li>-->
-<!--                </ul>-->
                 <div class="payment-container">
                     <div class="pay-item">
                         <div class="img-container">
@@ -163,8 +145,8 @@
                     </div>
                     <div class="pay-item">
                         <div class="radio">
-                            <input name="delivery" class="radio-input required" id="driveway" required type="radio">
-                            <label for="driveway" class="custom-style-radio">
+                            <input name="delivery" class="radio-input required" checked="checked" id="driveway2" required type="radio">
+                            <label for="driveway2" class="custom-style-radio">
                                 <span class="label-text">Оплата наложенным платежом</span>
                             </label>
                         </div>

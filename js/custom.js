@@ -71,3 +71,10 @@ if(form){
         }
     });
 }
+
+$(".pay-item").click(function () {
+    $(".payment-container").find(".radio-input").removeAttr("checked");
+    $(".pay-item").removeClass("active");
+    $(this).addClass("active");
+    $(this).find(".radio-input").attr("checked","checked");
+});

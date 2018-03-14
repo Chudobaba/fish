@@ -550,7 +550,7 @@ header {
   .delivery-and-total-order .title-section {
     font-family: 'pfdindisplayPRO Medium', sans-serif;
     font-size: 16px; }
-  .delivery-and-total-order .tablet th {
+  .delivery-and-total-order .title-table {
     font-family: 'pfdindisplayPRO Bold', sans-serif;
     font-size: 12px;
     color: #c7c7c7;
@@ -569,6 +569,15 @@ header {
     height: 1px;
     background-color: #dedede;
     margin: 30px 0 20px; }
+  .delivery-and-total-order .sum {
+    width: 100%;
+    border-top: 1px solid #dedede;
+    margin: 30px 0; }
+    .delivery-and-total-order .sum .max-width {
+      display: flex;
+      flex-direction: column;
+      max-width: 230px;
+      margin-left: auto; }
 
 .payment-container {
   display: flex;
@@ -577,16 +586,29 @@ header {
   justify-content: space-between;
   flex-direction: row; }
   .payment-container .pay-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
     border: 4px solid #dedede;
     width: 350px;
     min-height: 118px;
-    margin: auto;
-    margin-bottom: 30px;
-    background-color: #f8f8f8; }
+    margin: 0 auto 30px;
+    background-color: #f8f8f8;
+    padding-bottom: 20px; }
+    .payment-container .pay-item .radio {
+      width: auto;
+      max-width: 100%; }
+    .payment-container .pay-item.active {
+      background-color: #edf2fd;
+      border-color: #a6bff6; }
 
 .confirm-item {
-  MARGIN: AUTO;
-  MAX-WIDTH: 377PX; }
+  margin: auto;
+  max-width: 377px; }
   .confirm-item .confirm-description {
     text-align: center; }
 
