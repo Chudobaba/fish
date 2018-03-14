@@ -611,6 +611,14 @@ header {
   max-width: 377px; }
   .confirm-item .confirm-description {
     text-align: center; }
+  .confirm-item .confirm-description h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'pfdindisplayPRO Medium', sans-serif; }
+  .confirm-item .confirm-description p {
+    font-size: 14px;
+    color: #bebebe;
+    font-family: 'pfdintext-regular', sans-serif; }
 
 @media (max-width: 992px) {
   .menu-container .nav {

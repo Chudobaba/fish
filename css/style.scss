@@ -602,5 +602,16 @@ header {
  .confirm-description{
    text-align: center;
  }
+  .confirm-description h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'pfdindisplayPRO Medium', sans-serif;
+  }
+  .confirm-description p{
+    font-size: 14px;
+    color: #bebebe;
+    font-family: 'pfdintext-regular', sans-serif;
+
+  }
 }
 @import "./media";
