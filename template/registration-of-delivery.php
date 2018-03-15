@@ -137,7 +137,7 @@
                             <img src="../img/liqpay-log.png" alt="liqpay">
                         </div>
                         <div class="radio">
-                            <input name="delivery" class="radio-input required" id="driveway" type="radio">
+                            <input name="delivery" class="radio-input" id="driveway" type="radio">
                             <label for="driveway" class="custom-style-radio">
                                 <span class="label-text">Оплата через Приват 24 - Liqpay</span>
                             </label>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="pay-item">
                         <div class="radio">
-                            <input name="delivery" class="radio-input required" id="driveway2" type="radio">
+                            <input name="delivery" class="radio-input" id="driveway2" type="radio">
                             <label for="driveway2" class="custom-style-radio">
                                 <span class="label-text">Оплата наложенным платежом</span>
                             </label>

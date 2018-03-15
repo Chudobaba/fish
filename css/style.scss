@@ -638,4 +638,54 @@ header {
   }
 }
 
+.cabinet-steps {
+  @include width-container(840px,80px auto 30px,0);
+  @include flex(flex,nowrap,stretch);
+  box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  min-height: 450px;
+
+  .steps {
+    flex-basis: 230px;
+    background-color: #4d7fee;
+    padding: 30px 0;
+    .current {
+      a {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #fff;
+      }
+    }
+    a {
+      font-family: 'pfdintext-bold', sans-serif;
+      display: block;
+      font-size: 14px;
+      padding: 6px 25px;
+      margin-bottom: 10px;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #fff;
+      }
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 60px 30px;
+  }
+
+  .title-form {
+    font-family: 'pfdintext-bold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .hidden,
+  .current-info,
+  .number{
+    display: none;
+  }
+}
 @import "./media";

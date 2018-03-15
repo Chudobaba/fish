@@ -5,8 +5,7 @@
 <div class="wrapper">
 <?php include "../template/header.php" ?>
     <div id="example-vertical" class="cabinet-steps">
-        <h2 class="title-form">Мій кабінет</h2>
-        <h3>Особисті дані</h3>
+        <h3 class="hidden">Особисті дані</h3>
         <section class="first-cabinet-step">
             <div class="item">
                 <label for="username">Ім’я</label>
@@ -44,7 +43,7 @@
                 </div>
             </div>
         </section>
-        <h3>Історія замовлень</h3>
+        <h3 class="hidden">Історія замовлень</h3>
         <section class="delivery-history">
             <table class="tablet tablet-delivery-history">
                 <tr>
@@ -75,7 +74,7 @@
             </table>
 
         </section>
-        <h3>Вийти</h3>
+        <h3 class="hidden">Вийти</h3>
         <section>
             <p>The next and previous buttons help you to navigate through your content.</p>
         </section>

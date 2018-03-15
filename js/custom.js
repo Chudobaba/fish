@@ -12,8 +12,9 @@ document.querySelector(".toggle-menu").onclick = function () {
   document.querySelector(".menu").classList.toggle("active");
 };
 
+//cart table settings
 (function () {
-    //cart table settings
+
     $(".delete").click(function () {
         $(this).closest('tr').remove();
     });
@@ -33,64 +34,71 @@ document.querySelector(".toggle-menu").onclick = function () {
     });
 })();
 
-var form = $("#registrationFoDelivery");
-if(form){
-    form.validate({
-        errorPlacement: function errorPlacement(error, element) { element.before(error); },
-        rules: {
-            confirm: {
-                equalTo: "#email"
+//registration delivery settings
+(function () {
+    var form = $("#registrationFoDelivery");
+    if(form){
+        form.validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            rules: {
+                confirm: {
+                    equalTo: "#email"
+                }
             }
-        }
+        });
+        form.children("div").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            saveState : true,
+            labels: {
+                cancel: "Cancel",
+                current: "вибраний:",
+                finish: "кінець",
+                next: "Далі",
+                previous: "Повернутися назад",
+                loading: "Loading ..."
+            },
+            onStepChanging: function (event, currentIndex, newIndex)
+            {
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onStepChanged : function () {
+                if( $( ".last" ).hasClass( "current" )){
+                    $(".actions").remove();
+                }
+            },
+            onFinishing: function (event, currentIndex)
+            {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex)
+            {
+                alert("Submitted!");
+            }
+        });
+    }
+    $(".pay-item").click(function () {
+        $(".payment-container").find(".radio-input").removeAttr("checked");
+        $(".pay-item").removeClass("active");
+        $(this).addClass("active");
+        $(this).find(".radio-input").attr("checked","checked");
     });
-    form.children("div").steps({
+})();
+
+//personal-cabinet
+(function () {
+    $("#example-vertical").steps({
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        labels: {
-            cancel: "Cancel",
-            current: "вибраний:",
-            finish: "кінець",
-            next: "Далі",
-            previous: "Повернутися назад",
-            loading: "Loading ..."
-        },
-        onStepChanging: function (event, currentIndex, newIndex)
-        {
-            form.validate().settings.ignore = ":disabled,:hidden";
-            return form.valid();
-        },
-        onStepChanged : function () {
-            if( $( ".last" ).hasClass( "current" )){
-                $(".actions").remove();
-            }
-        },
-        onFinishing: function (event, currentIndex)
-        {
-            form.validate().settings.ignore = ":disabled";
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex)
-        {
-            alert("Submitted!");
-        }
+        stepsOrientation: "vertical",
+        enablePagination : false,
+        enableAllSteps : true,
+        saveState : true
     });
-}
-
-$(".pay-item").click(function () {
-    $(".payment-container").find(".radio-input").removeAttr("checked");
-    $(".pay-item").removeClass("active");
-    $(this).addClass("active");
-    $(this).find(".radio-input").attr("checked","checked");
-});
-
-//personal-cabinet
-$("#example-vertical").steps({
-    headerTag: "h3",
-    bodyTag: "section",
-    transitionEffect: "slideLeft",
-    stepsOrientation: "vertical",
-    enablePagination : false,
-    enableAllSteps : true,
-    saveState : true
-});
+//personal-cabinet added title
+    $(".cabinet-steps .steps").prepend("<h2 class='title-form'>Мій кабінет</h2>");
+})();
