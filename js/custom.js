@@ -99,6 +99,20 @@ document.querySelector(".toggle-menu").onclick = function () {
         enableAllSteps : true,
         saveState : true
     });
+
 //personal-cabinet added title
     $(".cabinet-steps .steps").prepend("<h2 class='title-form'>Мій кабінет</h2>");
+
+    //edit input
+    $(".edit-button").click(function () {
+        var parent = $(this).parent();
+        var input = parent.find('input');
+        if(input.attr("readonly")){
+            parent.addClass("active");
+            input.removeAttr("readonly");
+        }else {
+            input.attr("readonly","readonly");
+            parent.removeClass("active");
+        }
+    })
 })();

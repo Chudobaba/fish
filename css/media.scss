@@ -47,3 +47,33 @@
     padding: 20px 10px;
   }
 }
+@media (max-width: 520px) {
+  .cabinet-steps {
+    flex-direction: column;
+
+    .steps {
+      flex-basis: auto;
+      padding: 20px 0;
+
+      a {
+        padding: 2px 25px;
+        margin-bottom: 6px;
+      }
+    }
+    .title-form {
+      margin-bottom: 10px;
+    }
+    .first-cabinet-step,
+    .tablet-delivery-history{
+      padding: 25px 10px;
+    }
+    .item {
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+    .label-width {
+      margin-bottom: 10px;
+      width: auto;
+    }
+  }
+}
