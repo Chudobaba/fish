@@ -24,6 +24,10 @@
 * {
   box-sizing: border-box; }
 
+html.active, body.active {
+  height: 100%;
+  overflow: hidden; }
+
 html, body, ul, li, h1, h2, h3, h4, h5, h6, ol, ul, li, p {
   margin: 0;
   padding: 0; }
@@ -193,7 +197,7 @@ header {
   position: fixed;
   transform: translateY(-100px);
   background-color: #fff;
-  z-index: 3;
+  z-index: 25;
   left: 0;
   right: 0;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);

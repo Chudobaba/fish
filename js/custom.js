@@ -1,16 +1,19 @@
-var searchForm = document.querySelector(".search-form-container");
-
-document.querySelector(".show-search").onclick = function () {
-    searchForm.classList.toggle("active")
-};
-document.querySelector(".search-cross").onclick = function (e) {
+//search settings
+var searchForm = $(".search-form-container");
+$(".show-search").click(function () {
+    searchForm.toggleClass("active");
+});
+$(".search-cross").click(function (e) {
     e.preventDefault();
-    searchForm.classList.remove("active");
-};
-document.querySelector(".toggle-menu").onclick = function () {
-    this.classList.toggle("active");
-  document.querySelector(".menu").classList.toggle("active");
-};
+    searchForm.removeClass("active");
+});
+
+//toggle menu and overflow hidden (html,body)
+$(".toggle-menu").click(function () {
+    $(this).toggleClass("active");
+    $(".menu").toggleClass("active");
+    $("html,body").toggleClass("active");
+});
 
 //cart table settings
 (function () {
