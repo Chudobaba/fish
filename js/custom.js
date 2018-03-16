@@ -96,7 +96,8 @@ $(".toggle-menu").click(function () {
     $("#example-vertical").steps({
         headerTag: "h3",
         bodyTag: "section",
-        transitionEffect: "slideLeft",
+        transitionEffect: "fade",
+        transitionEffectSpeed: "0",
         stepsOrientation: "vertical",
         enablePagination : false,
         enableAllSteps : true,

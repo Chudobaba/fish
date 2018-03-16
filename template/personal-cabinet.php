@@ -92,7 +92,7 @@
         </section>
         <h3 class="hidden">Вийти</h3>
         <section>
-            <p>The next and previous buttons help you to navigate through your content.</p>
+
         </section>
     </div>
 </div>
