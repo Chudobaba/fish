@@ -57,6 +57,9 @@ textarea {
   outline: none;
   box-sizing: border-box; }
 
+table {
+  border-spacing: 0; }
+
 .align-right {
   text-align: right; }
 
@@ -268,7 +271,8 @@ header {
     font-family: 'pfdindisplayPRO Medium', sans-serif; }
   .form-aut label {
     color: #696969;
-    font-size: 12px; }
+    font-size: 12px;
+    cursor: pointer; }
   .form-aut .input-container {
     position: relative;
     padding-top: 25px;
@@ -321,7 +325,7 @@ header {
   margin-bottom: 125px; }
 
 .background-pic {
-  background: url("../img/seastar.png") no-repeat left; }
+  background: url("../img/star-img.png") no-repeat left; }
 
 .basket {
   max-width: 1230px;
@@ -331,14 +335,12 @@ header {
   padding: 35px;
   box-sizing: border-box;
   box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.15);
-  text-align: left;
-  overflow-x: auto; }
-  .basket .horizontal-scroll {
-    min-width: 870px; }
+  text-align: left; }
   .basket .tablet {
     width: 100%;
     font-family: 'pfdintext-bold',sans-serif;
-    color: #333333; }
+    color: #333333;
+    border-spacing: 0; }
   .basket .title-basket {
     font-family: 'pfdintext-bold',sans-serif;
     font-size: 24px;
@@ -434,7 +436,7 @@ header {
       left: 0; }
   .step-form .custom-style-radio {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
@@ -446,7 +448,8 @@ header {
       height: 12px;
       border-radius: 100%;
       background-color: #efefef;
-      margin-right: 10px; }
+      margin-right: 10px;
+      flex-shrink: 0; }
     .step-form .custom-style-radio:after {
       content: "";
       position: absolute;
@@ -586,18 +589,23 @@ header {
   justify-content: space-between;
   flex-direction: row; }
   .delivery-and-total-order .total-order {
-    max-width: 410px; }
+    max-width: 430px; }
+    .delivery-and-total-order .total-order .title-section {
+      padding: 10px 10px 0; }
   .delivery-and-total-order .delivery {
     max-width: 230px; }
+  .delivery-and-total-order .background-color tr:nth-child(odd) {
+    background-color: #f5f5f5; }
   .delivery-and-total-order .title-section {
     font-family: 'pfdindisplayPRO Medium', sans-serif;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 10px 10px 0; }
   .delivery-and-total-order .title-table {
     font-family: 'pfdindisplayPRO Bold', sans-serif;
     font-size: 12px;
     color: #c7c7c7;
     text-align: left;
-    padding-top: 20px; }
+    padding: 10px; }
   .delivery-and-total-order .price {
     font-size: 12px;
     color: #4d7fee;
@@ -606,7 +614,8 @@ header {
     text-align: center; }
   .delivery-and-total-order .title-product {
     font-size: 12px;
-    font-family: 'pfdindisplayPRO Medium', sans-serif; }
+    font-family: 'pfdindisplayPRO Medium', sans-serif;
+    padding: 10px; }
   .delivery-and-total-order .grey-line {
     height: 1px;
     background-color: #dedede;
@@ -661,9 +670,10 @@ header {
   box-sizing: border-box;
   min-height: 450px; }
   .cabinet-steps .steps {
-    flex-basis: 230px;
+    max-width: 230px;
     background-color: #4d7fee;
-    padding: 30px 0; }
+    padding: 30px 0;
+    width: 100%; }
     .cabinet-steps .steps .current a {
       background-color: rgba(0, 0, 0, 0.1);
       color: #fff; }
@@ -709,10 +719,16 @@ header {
     border-bottom-color: #8f8f8f; }
   .cabinet-steps .edit:hover .edit-button {
     display: block; }
+  .cabinet-steps .green-tick {
+    display: none; }
   .cabinet-steps .edit.active .border-bottom {
     border-bottom-color: #8f8f8f; }
   .cabinet-steps .edit.active .edit-button {
     display: block; }
+    .cabinet-steps .edit.active .edit-button .black-tick {
+      display: none; }
+    .cabinet-steps .edit.active .edit-button .green-tick {
+      display: block; }
   .cabinet-steps .edit-button {
     display: none;
     width: 18px;
@@ -741,7 +757,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%; }
+    height: 100%;
+    padding: 25px 10px; }
 
 .tablet-delivery-history {
   padding: 60px 25px; }
@@ -800,19 +817,43 @@ header {
     margin-right: 10px; } }
 @media (max-width: 870px) {
   .basket {
-    padding: 20px 10px; } }
+    padding: 20px 10px; }
+    .basket th,
+    .basket td,
+    .basket .title-product {
+      font-size: 12px; }
+    .basket th,
+    .basket td {
+      padding: 12px 8px; }
+    .basket .title-basket {
+      margin-bottom: 10px; }
+    .basket .sub-title-product {
+      font-size: 11px; }
+    .basket .price-and-order {
+      flex-direction: column; }
+    .basket .to-order {
+      margin-top: 10px;
+      margin-left: 0; }
+    .basket .all-price-all-product {
+      font-size: 14px; }
+    .basket .count-product {
+      width: 25px; }
+
+  .count-product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 @media (max-width: 520px) {
   .cabinet-steps {
     flex-direction: column; }
     .cabinet-steps .steps {
-      flex-basis: auto;
+      max-width: 100%;
       padding: 20px 0; }
       .cabinet-steps .steps a {
         padding: 2px 25px;
         margin-bottom: 6px; }
     .cabinet-steps .title-form {
       margin-bottom: 10px; }
-    .cabinet-steps .first-cabinet-step,
     .cabinet-steps .tablet-delivery-history {
       padding: 25px 10px; }
     .cabinet-steps .item {
@@ -821,5 +862,27 @@ header {
     .cabinet-steps .label-width {
       margin-bottom: 10px;
       width: auto; } }
+@media (max-width: 710px) {
+  .step-form .steps {
+    padding: 0 20px; }
+  .step-form .content {
+    padding: 25px 20px 0; }
+  .step-form .one-step {
+    flex-direction: column; }
+  .step-form .item {
+    max-width: 100%; } }
+@media (max-width: 550px) {
+  .step-form .title-form {
+    padding: 25px 0 25px;
+    text-align: center; }
+  .step-form .steps {
+    display: none; }
+  .step-form .radio-container {
+    flex-direction: column; }
+  .step-form .radio {
+    max-width: 100%;
+    width: 100%; }
+    .step-form .radio:first-child {
+      margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@
 <html lang="en">
 <?php include "../template/head.php"?>
 <body>
+<div class="wrapper">
 <?php include "../template/header.php"?>
 
 <form class="form-aut autho-form">
@@ -10,9 +11,9 @@
     <div class="input-container">
         <input class="user-name" placeholder="Ім’я або e-mail" required="" id="username" type="text" >
     </div>
-    <label for="password">E-mail</label>
+    <label for="pass">E-mail</label>
     <div class="input-container">
-        <input class="pass" placeholder="Пароль" required="" id="password" type="password">
+        <input class="pass" placeholder="Пароль" required="" id="pass" type="password">
     </div>
     <div class="checkbox-container">
         <div class="check-container">
@@ -28,7 +29,8 @@
     <button type="submit">Увійти</button>
     <p class="align-center">Не зареєстровані?<a class="border" href="#"> Зареєструватися</a></p>
 </form>
+</div>
 
-<script src="../js/custom.js"></script>
+<?php include "../template/scripts.php" ?>
 </body>
 </html>

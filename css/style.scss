@@ -221,6 +221,7 @@ header {
   label{
     color: #696969;
     font-size: 12px;
+    cursor: pointer;
   }
   .input-container{
     position: relative;
@@ -253,9 +254,6 @@ header {
   #rememberMe:checked + .style-checked:after{
     background: #fff url("../img/tick.png") no-repeat center;
   }
-  .check-container {
-
-  }
   .border{
     border-bottom: 1px solid #000;
   }
@@ -278,7 +276,7 @@ header {
   margin-bottom: 125px;
 }
 .background-pic{
-  background: url("../img/seastar.png") no-repeat left;
+  background: url("../img/star-img.png") no-repeat left;
 }
 .basket {
   @include width-container;
@@ -287,16 +285,12 @@ header {
   box-sizing: border-box;
   box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.15);
   text-align: left;
-  overflow-x: auto;
-
-  .horizontal-scroll {
-    min-width: 870px;
-  }
 
   .tablet {
     width: 100%;
     font-family: 'pfdintext-bold',sans-serif;
     color: #333333;
+    border-spacing: 0;
   }
   
   .title-basket {
@@ -403,7 +397,7 @@ header {
     }
   }
   .custom-style-radio {
-    @include flex(flex,wrap,center,flex-start);
+    @include flex(flex,nowrap,center,flex-start);
     cursor: pointer;
     &:before {
       content: "";
@@ -413,6 +407,7 @@ header {
       border-radius: 100%;
       background-color: #efefef;
       margin-right: 10px;
+      flex-shrink: 0;
     }
     &:after {
       content: "";
@@ -569,21 +564,33 @@ header {
 .delivery-and-total-order {
   @include flex;
   .total-order {
-    max-width: 410px;
+    max-width: 430px;
+
+    .title-section {
+      padding: 10px 10px 0;
+    }
   }
   .delivery{
     max-width: 230px;
   }
+  .background-color {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+    }
+  }
   .title-section{
     font-family: 'pfdindisplayPRO Medium', sans-serif;
     font-size: 16px;
+    padding: 10px 10px 0;
   }
   .title-table{
     font-family: 'pfdindisplayPRO Bold', sans-serif;
     font-size: 12px;
     color: #c7c7c7;
     text-align: left;
-    padding-top: 20px;
+    padding: 10px;
   }
   .price{
     font-size: 12px;
@@ -596,6 +603,7 @@ header {
   .title-product{
     font-size: 12px;
     font-family: 'pfdindisplayPRO Medium', sans-serif;
+    padding: 10px;
   }
   .grey-line{
     height: 1px;
@@ -649,9 +657,11 @@ header {
   min-height: 450px;
 
   .steps {
-    flex-basis: 230px;
+    max-width: 230px;
     background-color: #4d7fee;
     padding: 30px 0;
+    width: 100%;
+
     .current {
       a {
         background-color: rgba(0, 0, 0, 0.1);
@@ -721,12 +731,22 @@ header {
     }
   }
 
+  .green-tick {
+    display: none;
+  }
+
   .edit.active{
     .border-bottom {
       border-bottom-color: #8f8f8f;
     }
     .edit-button {
       display: block;
+      .black-tick {
+        display: none;
+      }
+      .green-tick {
+        display: block;
+      }
     }
   }
 
@@ -764,6 +784,7 @@ header {
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    padding: 25px 10px;
   }
 
 }

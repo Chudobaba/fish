@@ -13,14 +13,20 @@
                 <div class="input-container label-width edit">
                     <input readonly class="border-bottom user-name" autocomplete="off" placeholder="Ім’я або e-mail" required=""
                            id="username" type="text">
-                    <button class="edit-button edit-user"><img src="../img/edition.png" alt="edit"></button>
+                    <button class="edit-button edit-user">
+                        <img src="../img/edition.png" class="black-tick" alt="edit">
+                        <img src="../img/green-tick.png" class="green-tick" alt="green-tick">
+                    </button>
                 </div>
             </div>
             <div class="item">
                 <label class="label-width" for="email">Електронна пошта:</label>
                 <div class="input-container label-width edit">
                     <input readonly class="border-bottom mail" autocomplete="off" placeholder="E-mail" id="email" type="email">
-                     <button class="edit-button edit-email"><img src="../img/edition.png" alt="edit"></button>
+                    <button class="edit-button edit-user">
+                        <img src="../img/edition.png" class="black-tick" alt="edit">
+                        <img src="../img/green-tick.png" class="green-tick" alt="green-tick">
+                    </button>
                 </div>
             </div>
             <div class="item">
@@ -28,7 +34,10 @@
                 <div class="input-container label-width edit">
                     <input readonly class="border-bottom address" autocomplete="off" placeholder="Чернівці, Чернівецька обл." required="" id="delivery-address"
                            type="text">
-                     <button class="edit-button edit-user"><img src="../img/edition.png" alt="edit"></button>
+                    <button class="edit-button edit-user">
+                        <img src="../img/edition.png" class="black-tick" alt="edit">
+                        <img src="../img/green-tick.png" class="green-tick" alt="green-tick">
+                    </button>
                 </div>
             </div>
             <div class="item">
@@ -36,7 +45,10 @@
                 <div class="input-container label-width edit">
                     <input readonly="readonly" class="border-bottom tel" autocomplete="off" placeholder="+380509494497" required="" id="number"
                            type="tel">
-                     <button class="edit-button edit-tel"><img src="../img/edition.png" alt="edit"></button>
+                    <button class="edit-button edit-user">
+                        <img src="../img/edition.png" class="black-tick" alt="edit">
+                        <img src="../img/green-tick.png" class="green-tick" alt="green-tick">
+                    </button>
                 </div>
             </div>
             <div class="item">
@@ -44,7 +56,10 @@
                 <div class="input-container label-width edit">
                     <input readonly class="border-bottom birthday" autocomplete="off" placeholder="" required="" id="birth-date"
                            type="date">
-                     <button class="edit-button edit-birthday"><img src="../img/edition.png" alt="edit"></button>
+                    <button class="edit-button edit-user">
+                        <img src="../img/edition.png" class="black-tick" alt="edit">
+                        <img src="../img/green-tick.png" class="green-tick" alt="green-tick">
+                    </button>
                 </div>
             </div>
 
@@ -91,13 +106,9 @@
 
         </section>
         <h3 class="hidden">Вийти</h3>
-        <section>
-
-        </section>
+        <section></section>
     </div>
 </div>
-
-
 <?php include "../template/scripts.php" ?>
 </body>
 </html>

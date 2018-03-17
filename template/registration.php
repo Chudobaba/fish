@@ -2,6 +2,7 @@
 <html lang="en">
 <?php include "../template/head.php"?>
 <body>
+<div class="wrapper">
 <?php include "../template/header.php"?>
 
 <form class="form-aut reg-form">
@@ -31,7 +32,7 @@
 </form>
 <div class="background-pic"></div>
 
-
+</div>
 <?php include "../template/scripts.php"?>
 </body>
 </html>

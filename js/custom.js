@@ -40,9 +40,11 @@ $(".toggle-menu").click(function () {
 //registration delivery settings
 (function () {
     var form = $("#registrationFoDelivery");
-    if(form){
+    if (form) {
         form.validate({
-            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            errorPlacement: function errorPlacement(error, element) {
+                element.before(error);
+            },
             rules: {
                 confirm: {
                     equalTo: "#email"
@@ -52,8 +54,10 @@ $(".toggle-menu").click(function () {
         form.children("div").steps({
             headerTag: "h3",
             bodyTag: "section",
-            transitionEffect: "slideLeft",
-            saveState : true,
+            enableAllSteps : true,
+            transitionEffect: "fade",
+            transitionEffectSpeed: "0",
+            saveState: true,
             labels: {
                 cancel: "Cancel",
                 current: "вибраний:",
@@ -62,23 +66,20 @@ $(".toggle-menu").click(function () {
                 previous: "Повернутися назад",
                 loading: "Loading ..."
             },
-            onStepChanging: function (event, currentIndex, newIndex)
-            {
+            onStepChanging: function (event, currentIndex, newIndex) {
                 form.validate().settings.ignore = ":disabled,:hidden";
                 return form.valid();
             },
-            onStepChanged : function () {
-                if( $( ".last" ).hasClass( "current" )){
+            onStepChanged: function () {
+                if ($(".last").hasClass("current")) {
                     $(".actions").remove();
                 }
             },
-            onFinishing: function (event, currentIndex)
-            {
+            onFinishing: function (event, currentIndex) {
                 form.validate().settings.ignore = ":disabled";
                 return form.valid();
             },
-            onFinished: function (event, currentIndex)
-            {
+            onFinished: function (event, currentIndex) {
                 alert("Submitted!");
             }
         });
@@ -87,7 +88,13 @@ $(".toggle-menu").click(function () {
         $(".payment-container").find(".radio-input").removeAttr("checked");
         $(".pay-item").removeClass("active");
         $(this).addClass("active");
-        $(this).find(".radio-input").attr("checked","checked");
+        $(this).find(".radio-input").attr("checked", "checked");
+    });
+    $("a").click(function () {
+        if($(this)[0].hash === "#previous") {
+            $(".steps li").removeClass("done");
+        }
+
     });
 })();
 
@@ -99,9 +106,9 @@ $(".toggle-menu").click(function () {
         transitionEffect: "fade",
         transitionEffectSpeed: "0",
         stepsOrientation: "vertical",
-        enablePagination : false,
-        enableAllSteps : true,
-        saveState : true
+        enablePagination: false,
+        enableAllSteps: true,
+        saveState: true
     });
 
 //personal-cabinet added title
@@ -111,11 +118,11 @@ $(".toggle-menu").click(function () {
     $(".edit-button").click(function () {
         var parent = $(this).parent();
         var input = parent.find('input');
-        if(input.attr("readonly")){
+        if (input.attr("readonly")) {
             parent.addClass("active");
             input.removeAttr("readonly");
-        }else {
-            input.attr("readonly","readonly");
+        } else {
+            input.attr("readonly", "readonly");
             parent.removeClass("active");
         }
     })

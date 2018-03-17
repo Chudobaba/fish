@@ -64,39 +64,41 @@
                             <th class="title-table">Ціна</th>
                         </tr>
                         </thead>
-                        <tr>
-                            <td>
-                                <h4 class="title-product">Скумбрія середньосолена без голови патрана</h4>
-                            </td>
-                            <td>
-                                <p class="amount">2</p>
-                            </td>
-                            <td>
-                                <p class="price">600</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4 class="title-product">Кілька в гострій заливці з часником та зеленню</h4>
-                            </td>
-                            <td>
-                                <p class="amount">1</p>
-                            </td>
-                            <td>
-                                <p class="price">170</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4 class="title-product">Сьомга холодного копчення, філе</h4>
-                            </td>
-                            <td>
-                                <p class="amount">1</p>
-                            </td>
-                            <td>
-                                <p class="price">200</p>
-                            </td>
-                        </tr>
+                        <tbody class="background-color">
+                            <tr >
+                                <td>
+                                    <h4 class="title-product">Скумбрія середньосолена без голови патрана</h4>
+                                </td>
+                                <td>
+                                    <p class="amount">2</p>
+                                </td>
+                                <td>
+                                    <p class="price">600</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="title-product">Кілька в гострій заливці з часником та зеленню</h4>
+                                </td>
+                                <td>
+                                    <p class="amount">1</p>
+                                </td>
+                                <td>
+                                    <p class="price">170</p>
+                                </td>
+                            </tr>
+                            <tr >
+                                <td>
+                                    <h4 class="title-product">Сьомга холодного копчення, філе</h4>
+                                </td>
+                                <td>
+                                    <p class="amount">1</p>
+                                </td>
+                                <td>
+                                    <p class="price">200</p>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div class="delivery">
@@ -163,7 +165,7 @@
                         <h2>Дякуємо за замовлення!</h2>
                         <p>Незабаром наш менеджер зв’яжеться з Вами.</p>
                         <p>Також ми вислали лист з деталями на Вашу електронну пошту.</p>
-                        <a href="/" class="link-to-home">на головну</a>
+                        <a href="/" class="link-to-home">На головну</a>
                     </div>
                 </div>
             </section>
