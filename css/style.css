@@ -576,11 +576,13 @@ header {
     .step-form .confirm-item .confirm-description h2 {
       font-size: 24px;
       text-transform: uppercase;
-      font-family: 'pfdindisplayPRO Medium', sans-serif; }
+      font-family: 'pfdindisplayPRO Medium', sans-serif;
+      color: #333333;
+      padding: 30px 0 20px; }
     .step-form .confirm-item .confirm-description p {
       font-size: 14px;
       color: #bebebe;
-      font-family: 'pfdintext-regular', sans-serif; }
+      font-family: 'pfdindisplayPRO regilar', sans-serif; }
 
 .delivery-and-total-order {
   display: flex;
@@ -695,11 +697,10 @@ header {
   .cabinet-steps .item {
     display: flex;
     padding-bottom: 31px;
-    font-family: 'pfdintext-regular', sans-serif;
     font-size: 14px; }
   .cabinet-steps .label-width {
     width: 50%;
-    font-family: pfdintext-regular, sans-serif; }
+    font-family: 'pfdintext-bold' , sans-serif; }
   .cabinet-steps .title-form {
     font-family: 'pfdintextpro-medium', sans-serif;
     font-size: 14px;
@@ -714,7 +715,7 @@ header {
   .cabinet-steps .input-container {
     position: relative; }
   .cabinet-steps .border-bottom {
-    border-bottom: 2px solid transparent; }
+    border-bottom: 1px solid transparent; }
   .cabinet-steps .edit:hover .border-bottom {
     border-bottom-color: #8f8f8f; }
   .cabinet-steps .edit:hover .edit-button {
@@ -739,7 +740,7 @@ header {
   .cabinet-steps input {
     color: #000000;
     width: 100%;
-    font-family: 'pfdintext-bold' , sans-serif; }
+    font-family: 'pfdintext-regular',sans-serif; }
   .cabinet-steps ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: black; }
@@ -821,14 +822,14 @@ header {
     .basket th,
     .basket td,
     .basket .title-product {
-      font-size: 12px; }
+      font-size: 14px; }
     .basket th,
     .basket td {
       padding: 12px 8px; }
     .basket .title-basket {
       margin-bottom: 10px; }
     .basket .sub-title-product {
-      font-size: 11px; }
+      font-size: 14px; }
     .basket .price-and-order {
       flex-direction: column; }
     .basket .to-order {
@@ -843,6 +844,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center; } }
+@media (max-width: 650px) {
+  .basket th,
+  .basket td,
+  .basket .title-product {
+    font-size: 11px; }
+  .basket .sub-title-product {
+    font-size: 11px; } }
 @media (max-width: 520px) {
   .cabinet-steps {
     flex-direction: column; }
